@@ -1,40 +1,25 @@
-// 1. Declare a global variable customerName using var and assign it 'bob'.
+// 1. Declare a global variable customerName
 var customerName = 'bob';
 
-// 2. Function to uppercase the global customerName variable.
+// 2. Function to uppercase customerName
 function upperCaseCustomerName() {
     customerName = customerName.toUpperCase();
 }
 
-// 3. Function to declare a global bestCustomer and assign it 'not bob'.
+// 3. Function to declare a global bestCustomer variable
 function setBestCustomer() {
-    bestCustomer = 'not bob'; // No var/let/const means it becomes global.
+    bestCustomer = 'not bob'; // Declared globally (not using var, let, or const)
 }
 
-// 4. Function to overwrite the bestCustomer variable.
+// 4. Function to overwrite bestCustomer
 function overwriteBestCustomer() {
     bestCustomer = 'maybe bob';
 }
 
-// 5. Declare a constant leastFavoriteCustomer and assign it a value.
-const leastFavoriteCustomer = 'someone';
+// 5. Declare a constant leastFavoriteCustomer
+const leastFavoriteCustomer = 'John';
 
-// 6. Function that tries to change leastFavoriteCustomer (will cause an error).
+// 6. Function to attempt changing leastFavoriteCustomer
 function changeLeastFavoriteCustomer() {
-    leastFavoriteCustomer = 'someone else'; // This will throw an error because it's a constant.
+    leastFavoriteCustomer = 'Jane'; // This will throw an error
 }
-
-// Test the functions (optional)
-console.log(customerName); // 'bob'
-upperCaseCustomerName();
-console.log(customerName); // 'BOB'
-
-setBestCustomer();
-console.log(bestCustomer); // 'not bob'
-
-overwriteBestCustomer();
-console.log(bestCustomer); // 'maybe bob'
-
-console.log(leastFavoriteCustomer); // 'someone'
-changeLeastFavoriteCustomer(); // This will throw an error
-
